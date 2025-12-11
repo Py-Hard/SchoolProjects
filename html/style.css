@@ -28,14 +28,6 @@ p {
     margin: 20px auto;
 }
 
-.badge-container {
-    display: flex;
-    justify-content: center;   /* centers horizontally */
-    align-items: center;       /* centers vertically (if needed) */
-    gap: 20px;
-    margin: 20px 0;
-}
-
 .badge {
     display: inline-block;
 }
@@ -69,7 +61,6 @@ p {
     margin-top: 10px;
 }
 
-/* ✅ Light mode overrides */
 @media (prefers-color-scheme: light) {
     body {
         background-color: #ffffff;

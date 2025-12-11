@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* Dark mode page styling */
+/* Dark mode page styling (default) */
 body {
     background-color: #121212;      /* deep dark background */
     color: #e0e0e0;                 /* soft light text */
@@ -40,7 +40,6 @@ p {
     display: inline-block;
 }
 
-
 /* Box styling */
 .box {
     background: #1e1e1e;            /* slightly lighter dark */
@@ -68,4 +67,36 @@ p {
 
 .footer .badge img {
     margin-top: 10px;
+}
+
+/* ✅ Light mode overrides */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    h1, h2,
+    .box h2 {
+        color: #000000;
+    }
+
+    p {
+        color: #333333;
+    }
+
+    .box {
+        background: #f2f2f2;
+        border: 1px solid #cccccc;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .footer {
+        color: #333333;
+        border-top: 1px solid #cccccc;
+    }
+
+    .badge img {
+        filter: none;
+    }
 }

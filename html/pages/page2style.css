@@ -1,0 +1,40 @@
+/* Reset + base styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f0f2f5;
+    color: #333;
+}
+
+/* Centered content box */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+h1 {
+    margin-top: 0;
+    color: #222;
+    font-size: 2rem;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Links */
+a {
+    color: #0066cc;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

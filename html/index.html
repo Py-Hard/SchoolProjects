@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
@@ -13,17 +12,28 @@
 
     <!-- Styled Box -->
     <div class="box">
+
         <h2>I have no idea what I'm doing!</h2>
         <p>seriously.</p>
 
         <h2>Learning CSS</h2>
         <p>because """""""stYlE""""""".</p>
-        
+
         <h2>This website should have more Copilot</h2>
         <p>- Microsoft, definitely.</p>
-        
-        <button onclick="fakeAI()">Ask Al</button>
-        <p id="al"></p>
+
+        <h2>Go to a different page</h2>
+
+        <div class="nav-section">
+            <a href="pages/page2.html" class="nav-link">Click here</a>
+        </div>
+
+        <hr class="divider">
+
+        <div class="ai-section">
+            <button onclick="fakeAI()">Ask Al</button>
+            <p id="al"></p>
+        </div>
 
         <script>
             function fakeAI() {
@@ -38,37 +48,36 @@
                     "Go on down to the hardware store!",
                     "Result: Soon™"
                 ];
-            document.getElementById("al").textContent =
-                responses[Math.floor(Math.random() * responses.length)];
+                document.getElementById("al").textContent =
+                    responses[Math.floor(Math.random() * responses.length)];
             }
         </script>
 
-        
-    </div>
-    
-<footer class="footer">
-    <p>© 2025 Py-Hard. All rights reserved.</p>
+    </div> <!-- end .box -->
 
-    <a href="https://github.com/py-hard" class="badge">
-        <img 
-            src="https://img.shields.io/badge/GitHub-black?logo=github&logoColor=white"
-            alt="GitHub Badge">
-    </a>
+    <footer class="footer">
+        <p>© 2025 Py-Hard. All rights reserved.</p>
 
-    <a href="https://html.spec.whatwg.org/" class="badge">
-        <img
-            src="https://img.shields.io/badge/Written_in-HTML5-gray?logo=html5&color=E44D26"
-            alt="HTML5 Badge">
-    </a>
+        <a href="https://github.com/py-hard" class="badge">
+            <img 
+                src="https://img.shields.io/badge/GitHub-black?logo=github&logoColor=white"
+                alt="GitHub Badge">
+        </a>
 
-    <a href="https://www.w3.org/Style/CSS/" class="badge">
-        <img
-            src="https://img.shields.io/badge/...and-CSS-1572B6?logo=css&logoColor=1572B6&labelColor=555"
-            alt="...and CSS Badge">
-    </a>
+        <a href="https://html.spec.whatwg.org/" class="badge">
+            <img
+                src="https://img.shields.io/badge/Written_in-HTML5-gray?logo=html5&color=E44D26"
+                alt="HTML5 Badge">
+        </a>
 
-    <p class="sp">Soon™</p>
-</footer>
+        <a href="https://www.w3.org/Style/CSS/" class="badge">
+            <img
+                src="https://img.shields.io/badge/...and-CSS-1572B6?logo=css&logoColor=1572B6&labelColor=555"
+                alt="...and CSS Badge">
+        </a>
+
+        <p class="sp">Soon™</p>
+    </footer>
 
 </body>
 </html>

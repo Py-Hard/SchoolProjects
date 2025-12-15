@@ -7,8 +7,8 @@
 
 /* Dark mode page styling (default) */
 body {
-    background-color: #121212;      /* deep dark background */
-    color: #e0e0e0;                 /* soft light text */
+    background-color: #121212;
+    color: #e0e0e0;
     font-family: Arial, sans-serif;
     padding: 20px;
 }
@@ -34,7 +34,7 @@ p {
 
 /* Box styling */
 .box {
-    background: #1e1e1e;            /* slightly lighter dark */
+    background: #1e1e1e;
     padding: 20px;
     border-radius: 8px;
     max-width: 600px;
@@ -43,11 +43,74 @@ p {
     border: 1px solid #2a2a2a;
 }
 
+/* Section that holds the link */
+.nav-section {
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Make the link look like a button */
+a.nav-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0078ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+a.nav-link:hover {
+    background: #005fcc;
+}
+
+/* Global link styling (does NOT override nav-link) */
+a {
+    color: #66aaff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:not(.nav-link):hover {
+    text-decoration: underline;
+}
+
+/* Divider line between sections */
+.divider {
+    margin: 30px 0;
+    border: none;
+    border-top: 2px solid #444;
+}
+
+/* Section for the Ask Al button */
+.ai-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.ai-section button {
+    padding: 10px 20px;
+    background: #444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.ai-section button:hover {
+    background: #222;
+}
+
+/* Headings inside the box */
 .box h2 {
-    margin-top: 10px;
+    margin-top: 20px;
     color: #ffffff;
 }
 
+/* Footer */
 .footer {
     margin-top: 40px;
     padding: 20px;
@@ -57,10 +120,15 @@ p {
     border-top: 1px solid #2a2a2a;
 }
 
+.footer .badge {
+    margin: 0 8px;
+}
+
 .footer .badge img {
     margin-top: 10px;
 }
 
+/* Animated Soon™ text */
 .sp {
     font-size: 1.4rem;
     font-weight: bold;
@@ -77,7 +145,7 @@ p {
     100% { background-position: 0% 50%; }
 }
 
-
+/* Light mode overrides */
 @media (prefers-color-scheme: light) {
     body {
         background-color: #ffffff;
@@ -97,6 +165,10 @@ p {
         background: #f2f2f2;
         border: 1px solid #cccccc;
         box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .divider {
+        border-top: 2px solid #cccccc;
     }
 
     .footer {

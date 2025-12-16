@@ -15,36 +15,34 @@
         <p id="modeMessage">This page now has some clean styling.</p>
 
         <a href="../index.html" class="nav-link">Back to Home</a>
-        
-        <script>
-    // Only roast the user if they're using light mode
-    if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+    </div> <!-- ✅ close container BEFORE script -->
 
-        // Load almonds.txt
-        fetch("../assets/almonds.txt")
-            .then(response => response.text())
-            .then(text => {
-                const lines = text
-                    .split("\n")
-                    .map(l => l.trim())
-                    .filter(l => l.length > 0);
+    <script>
+        if (window.matchMedia('(prefers-color-scheme: light)').matches) {
 
-                const randomLine = lines[Math.floor(Math.random() * lines.length)];
+            fetch("../assets/almonds.txt")
+                .then(response => response.text())
+                .then(text => {
+                    const lines = text
+                        .split("\n")
+                        .map(l => l.trim())
+                        .filter(l => l.length > 0);
 
-                // Replace header text
-                document.getElementById("almondHeader").textContent = randomLine;
+                    const randomLine = lines[Math.floor(Math.random() * lines.length)];
 
-                // Remove the paragraph entirely
-                const para = document.getElementById("modeMessage");
-                if (para) para.remove();
-            })
-            .catch(err => {
-                console.error("Could not load almonds.txt:", err);
-            });
-    }
-</script>
+                    const header = document.getElementById("almondHeader");
+                    header.textContent = randomLine;
 
-    </div>
+                    const para = document.getElementById("modeMessage");
+                    if (para) para.remove();
+
+                    if (randomLine.toLowerCase().includes("comic sans")) {
+                        document.body.classList.add("comic-sans");
+                    }
+                })
+                .catch(err => console.error("Could not load almonds.txt:", err));
+        }
+    </script>
 
 </body>
 </html>

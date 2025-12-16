@@ -87,3 +87,29 @@ a:hover {
         "Comic Neue",
         cursive !important;
 }
+
+/* flashbang the user! */
+
+.flashbang {
+    animation: flashbangEffect 0.6s ease-out;
+}
+
+@keyframes flashbangEffect {
+    0% {
+        filter: brightness(1) blur(0px);
+        background-color: transparent;
+    }
+    20% {
+        filter: brightness(2.5) blur(2px);
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+    40% {
+        filter: brightness(2) blur(1px);
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+    100% {
+        filter: brightness(1) blur(0px);
+        background-color: transparent;
+    }
+}
+

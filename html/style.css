@@ -130,19 +130,51 @@ a:not(.nav-link):hover {
 
 /* Animated Soon™ text */
 .sp {
-    font-size: 1.4rem;
-    font-weight: bold;
-    background: linear-gradient(90deg, #ff00cc, #3333ff, #00eaff, #ff9900);
-    background-size: 400% 400%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientShift 6s ease infinite;
+  font-size: 3rem;             /* Adjust as needed */
+  font-weight: bold;
+  display: inline-block;
+  line-height: 1.2;
+  
+  /* Hover effects */
+  transition: transform 0.4s ease;
+  cursor: pointer;
 }
 
-@keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+.sp:hover {
+  transform: scale(1.1);
+}
+
+/* Each letter gets its own tight rainbow gradient */
+.sp span {
+  display: inline-block;
+  background: linear-gradient(90deg,
+    red, orange, yellow, green, cyan, blue, violet, red);
+  background-size: 200% 200%;   /* Tighter = more visible color changes */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  
+  /* Faster, continuous left-to-right flow */
+  animation: waveFlow 3s linear infinite;
+}
+
+/* Stagger delays for left → right wave */
+.sp span:nth-child(1)  { animation-delay: 0s; }
+.sp span:nth-child(2)  { animation-delay: 0.15s; }
+.sp span:nth-child(3)  { animation-delay: 0.3s; }
+.sp span:nth-child(4)  { animation-delay: 0.45s; }
+.sp span:nth-child(5)  { animation-delay: 0.6s; }
+/* Add more for longer text */
+
+/* Speed up dramatically on hover */
+.sp:hover span {
+  animation-duration: 1s;
+}
+
+@keyframes waveFlow {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }  /* Matches the tighter size */
 }
 
 /* Light mode overrides */

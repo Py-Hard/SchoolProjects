@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Page 2</title>
+    <link rel="stylesheet" href="page2style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 id="almondHeader">Welcome to Page 2 </h1>
+
+        <p id="modeMessage"> This page now has some clean styling. </p>
+        
+            <div id="modeMessage" style="width: 100%; max-width: 800px; margin: 40px auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+        <iframe
+            id="modeMessage"
+            width="100%" 
+            height="100%" 
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&loop=1" 
+            frameborder="0" 
+            allow="autoplay; fullscreen" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+        <a href="../index.html" class="nav-link">Back to Home</a>
+    </div>
+
+    <script>
+        if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+
+            fetch("../assets/almonds.txt")
+                .then(response => response.text())
+                .then(text => {
+                    const lines = text
+                        .split("\n")
+                        .map(l => l.trim())
+                        .filter(l => l.length > 0);
+
+                    const randomLine = lines[Math.floor(Math.random() * lines.length)];
+
+                    const header = document.getElementById("almondHeader");
+                    header.textContent = randomLine;
+
+                    const para = document.getElementById("modeMessage");
+                    if (para) para.remove();
+
+                    if (randomLine.toLowerCase().includes("comic sans")) {
+                        document.body.classList.add("comic-sans");
+                    }
+                    if (randomLine.toLowerCase().includes("flashbang")) {
+                        document.body.classList.add("flashbang");
+                    }
+                })
+                .catch(err => console.error("Could not load almonds.txt:", err));
+        }
+    </script>
+
+</body>
+</html>
+

@@ -1,0 +1,214 @@
+/* Reset default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Dark mode page styling (default) */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Main heading */
+h1 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Paragraphs */
+p {
+    color: #cfcfcf;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 20px auto;
+}
+
+.badge {
+    display: inline-block;
+}
+
+/* Box styling */
+.box {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    border: 1px solid #2a2a2a;
+}
+
+/* Section that holds the link */
+.nav-section {
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Make the link look like a button */
+a.nav-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0078ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+a.nav-link:hover {
+    background: #005fcc;
+}
+
+/* Global link styling (does NOT override nav-link) */
+a {
+    color: #66aaff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:not(.nav-link):hover {
+    text-decoration: underline;
+}
+
+/* Divider line between sections */
+.divider {
+    margin: 30px 0;
+    border: none;
+    border-top: 2px solid #444;
+}
+
+/* Section for the Ask Al button */
+.ai-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.ai-section button {
+    padding: 10px 20px;
+    background: #444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.ai-section button:hover {
+    background: #222;
+}
+
+/* Headings inside the box */
+.box h2 {
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+/* Footer */
+.footer {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    color: #cfcfcf;
+    font-size: 14px;
+    border-top: 1px solid #2a2a2a;
+}
+
+.footer .badge {
+    margin: 0 8px;
+}
+
+.footer .badge img {
+    margin-top: 10px;
+}
+
+/* Animated Soon™ text */
+.sp {
+  font-size: 3rem;             /* Adjust as needed */
+  font-weight: bold;
+  display: inline-block;
+  line-height: 1.2;
+  
+  /* Hover effects */
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+.sp:hover {
+  transform: scale(1.1);
+}
+
+/* Each letter gets its own tight rainbow gradient */
+.sp span {
+  display: inline-block;
+  background: linear-gradient(90deg,
+    red, orange, yellow, green, cyan, blue, violet, red);
+  background-size: 200% 200%;   /* Tighter = more visible color changes */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  
+  /* Faster, continuous left-to-right flow */
+  animation: waveFlow 3s linear infinite;
+}
+
+/* Stagger delays for left → right wave */
+.sp span:nth-child(1)  { animation-delay: 0s; }
+.sp span:nth-child(2)  { animation-delay: 0.15s; }
+.sp span:nth-child(3)  { animation-delay: 0.3s; }
+.sp span:nth-child(4)  { animation-delay: 0.45s; }
+.sp span:nth-child(5)  { animation-delay: 0.6s; }
+/* Add more for longer text */
+
+/* Speed up dramatically on hover */
+.sp:hover span {
+  animation-duration: 1s;
+}
+
+@keyframes waveFlow {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }  /* Matches the tighter size */
+}
+
+/* Light mode overrides */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    h1, h2,
+    .box h2 {
+        color: #000000;
+    }
+
+    p {
+        color: #333333;
+    }
+
+    .box {
+        background: #f2f2f2;
+        border: 1px solid #cccccc;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .divider {
+        border-top: 2px solid #cccccc;
+    }
+
+    .footer {
+        color: #333333;
+        border-top: 1px solid #cccccc;
+    }
+
+    .badge img {
+        filter: none;
+    }
+}

@@ -4,7 +4,6 @@
 
 [![Build Status](https://img.shields.io/badge/Build-Under_Development-orange?labelColor=000000&logo=githubactions&logoColor=white)](https://github.com/)
 [![License](https://img.shields.io/badge/License-MIT-green?labelColor=000000)](LICENSE)
-[![PyPI](https://img.shields.io/badge/PyPI-Coming_Soon-blue?labelColor=000000&logo=pypi&logoColor=white)](https://pypi.org/)
 
 
 Welcome to my test repo, where I do stuff I dont know.

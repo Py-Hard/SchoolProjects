@@ -2,10 +2,6 @@
 
 [![Written with CodeEdit](https://img.shields.io/badge/Written_with-CodeEdit-FFFFFF?labelColor=000000&logo=github&logoColor=white)](https://github.com/CodeEditApp/CodeEdit) [![Written in Python](https://img.shields.io/badge/Written%20in-Python-3776AB?logo=python&logoColor=white&labelColor=FFD43B&color=3776AB)](https://www.python.org/) [![Written in HTML5](https://img.shields.io/badge/Written_in-HTML5-gray?logo=html5&color=E44D26)](https://html.spec.whatwg.org/)[![Written in CSS](https://img.shields.io/badge/Written_in-CSS-1572B6?logo=css&logoColor=1572B6&labelColor=555)](https://www.w3.org/Style/CSS/)
 
-[![Build Status](https://img.shields.io/badge/Build-Under_Development-orange?labelColor=000000&logo=githubactions&logoColor=white)](https://github.com/)
-[![License](https://img.shields.io/badge/License-MIT-green?labelColor=000000)](LICENSE)
-
-
 Welcome to my test repo, where I do stuff I dont know.
 
 > [!IMPORTANT]
